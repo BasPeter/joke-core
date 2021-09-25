@@ -7,6 +7,12 @@
 
 import Foundation
 
+struct JokeApiModel:  Codable {
+    let id: UUID
+    let joke: String
+    let punchline: String?
+}
+
 struct JokeListObject: Codable {
     let joke: String
     let punchline: String?
