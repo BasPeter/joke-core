@@ -7,10 +7,10 @@
 
 import Foundation
 
-public struct JokeObject: Codable {}
+public struct JokeObject {}
 
 extension JokeObject {
-    public struct List {
+    public struct List: Codable {
         let joke: String
         let punchline: String?
         
