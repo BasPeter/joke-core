@@ -7,30 +7,24 @@
 
 import Foundation
 
-struct JokeApiModel:  Codable {
+public struct JokeListObject: Codable {
+    let joke: String
+    let punchline: String?
+}
+
+public struct JokeGetObject: Codable {
     let id: UUID
     let joke: String
     let punchline: String?
 }
 
-struct JokeListObject: Codable {
-    let joke: String
-    let punchline: String?
-}
-
-struct JokeGetObject: Codable {
+public struct JokeCreateObject: Codable {
     let id: UUID
     let joke: String
     let punchline: String?
 }
 
-struct JokeCreateObject: Codable {
-    let id: UUID
-    let joke: String
-    let punchline: String?
-}
-
-struct JokeFindObject: Codable {
+public struct JokeFindObject: Codable {
     let joke: String
     let punchline: String?
 }
