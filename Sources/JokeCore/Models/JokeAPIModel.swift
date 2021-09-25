@@ -11,7 +11,7 @@ public struct JokeListObject: Codable {
     let joke: String
     let punchline: String?
     
-    init(joke: String, punchline: String?) {
+    public init(joke: String, punchline: String?) {
         self.joke = joke
         self.punchline = punchline
     }
