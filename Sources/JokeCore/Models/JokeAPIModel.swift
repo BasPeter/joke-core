@@ -21,15 +21,32 @@ public struct JokeGetObject: Codable {
     let id: UUID
     let joke: String
     let punchline: String?
+    
+    public init(id: UUID, joke: String, punchline: String?) {
+        self.id = id
+        self.joke = joke
+        self.punchline = punchline
+    }
 }
 
 public struct JokeCreateObject: Codable {
     let id: UUID
     let joke: String
     let punchline: String?
+    
+    public init(id: UUID, joke: String, punchline: String?) {
+        self.id = id
+        self.joke = joke
+        self.punchline = punchline
+    }
 }
 
 public struct JokeFindObject: Codable {
     let joke: String
     let punchline: String?
+    
+    public init(joke: String, punchline: String?) {
+        self.joke = joke
+        self.punchline = punchline
+    }
 }
