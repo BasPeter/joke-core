@@ -7,6 +7,18 @@
 
 import Foundation
 
+public struct Joke: Codable {
+    public struct List {
+        let joke: String
+        let punchline: String?
+        
+        public init(joke: String, punchline: String?) {
+            self.joke = joke
+            self.punchline = punchline
+        }
+    }
+}
+
 public struct JokeListObject: Codable {
     let joke: String
     let punchline: String?
