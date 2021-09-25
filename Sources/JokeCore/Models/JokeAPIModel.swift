@@ -10,6 +10,11 @@ import Foundation
 public struct JokeListObject: Codable {
     let joke: String
     let punchline: String?
+    
+    init(joke: String, punchline: String?) {
+        self.joke = joke
+        self.punchline = punchline
+    }
 }
 
 public struct JokeGetObject: Codable {
