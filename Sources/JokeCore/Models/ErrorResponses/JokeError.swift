@@ -8,19 +8,19 @@
 import Foundation
 import Vapor
 
-enum JokeError {
+public enum JokeError {
     case gatewayTimeout(String)
 }
 
 extension JokeError: AbortError {
-    var reason: String {
+    public var reason: String {
         switch self {
         case .gatewayTimeout(let path):
             return "Joke Api Failed to respond on: \(path)"
         }
     }
 
-    var status: HTTPStatus {
+    public var status: HTTPStatus {
         switch self {
         case .gatewayTimeout:
             return .gatewayTimeout
